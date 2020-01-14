@@ -1,5 +1,8 @@
 module NorvigsTrieSpellchecker
+using DataStructures
 
-greet() = print("Hello World!")
+include("spellcheker.jl")
+
+export correction, load_text
 
 end # module
