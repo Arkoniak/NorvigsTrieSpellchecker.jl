@@ -50,10 +50,8 @@ function correct_recursive(t::Trie, word, idx, tolerance, found)
     end
 
     #replace
-    if idx <= length(word)
-        for (k, v) in t.children
-            res = correct_recursive(v, word, idx + 1, tolerance - 1, res)
-        end
+    for (k, v) in t.children
+        res = correct_recursive(v, word, idx + 1, tolerance - 1, res)
     end
 
     #transpose
